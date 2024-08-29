@@ -4,11 +4,30 @@
   <nav class="menu">
     <ul class="menu__list">
       <li class="menu__item">
-        <router-link to="/">Форма</router-link>
+        <router-link to="/" class="menu__link">Форма</router-link>
       </li>
-      <li class="menu__item"><router-link to="/preview"> Превью </router-link></li>
+      <li class="menu__item">
+        <router-link to="/preview" class="menu__link"> Превью </router-link>
+      </li>
     </ul>
   </nav>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+.menu {
+  &__list {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: var(--colors-gray);
+  }
+}
+</style>
