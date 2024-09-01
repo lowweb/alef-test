@@ -11,7 +11,10 @@ const personStore = usePersonDataStore()
     <BFieldSet class="form__fieldset">
       <template #legend>Персональные данные</template>
       <template #fieldset>
-        <div class="person-preview">
+        <div
+          class="person-preview"
+          v-if="personStore.person.name != '' || personStore.person.age != ''"
+        >
           {{ personStore.person.name }}, {{ personStore.person.age }}
           {{ getAgeNoun(personStore.person.age) }}
         </div>
@@ -21,6 +24,12 @@ const personStore = usePersonDataStore()
     <BFieldSet class="form__fieldset">
       <template #legend>Дети</template>
       <template #fieldset>
+        <li
+          class="childrens-preview__item"
+          v-if="Object.keys(personStore.person.childrens).length === 0"
+        >
+          нет данных
+        </li>
         <ul
           class="childrens-preview"
           v-for="(children, index) in personStore.person.childrens"

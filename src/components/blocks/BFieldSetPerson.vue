@@ -10,6 +10,6 @@ const props = defineProps({
 })
 </script>
 <template>
-  <UInput v-model="data.name" placeholder="Введите имя">Имя</UInput>
-  <UInput v-model="data.age" placeholder="Введите возвраст">Возраст</UInput>
+  <UInput v-model="data.name" placeholder="Введите имя" type="text">Имя</UInput>
+  <UInput v-model="data.age" placeholder="Введите возвраст" type="number">Возраст</UInput>
 </template>
