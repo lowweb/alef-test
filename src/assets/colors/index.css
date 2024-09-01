@@ -1,13 +1,13 @@
 :root {
-  /* --colors-primary-disabled: #ceecfc; */
+  --colors-primary-disabled: #ceecfc;
   --colors-primary: #01a7fd;
   --colors-primary-hover: #0f79af;
   /* --colors-primary-active: #59c79f; */
   --colors-whites: rgba(255, 255, 255, 0.88);
   --colors-white: #fff;
   --colors-graym: #fafafa;
-  /* --colors-grayl: #f1f1f1;
-	--colors-grass: #d4d4d4; */
+  --colors-grayl: #f1f1f1;
+  /* --colors-grass: #d4d4d4; */
   --colors-gray: rgba(17, 17, 17, 0.48);
   /* --colors-grayk: #6b6b6b; */
   --colors-black: #111;
