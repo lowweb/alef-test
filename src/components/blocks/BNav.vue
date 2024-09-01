@@ -28,6 +28,14 @@
     font-size: 14px;
     line-height: 171%;
     color: var(--colors-gray);
+    &:hover {
+      box-shadow: inset 0 -2px 0 0 #868686;
+      background: var(--colors-white);
+    }
   }
+}
+.router-link-active {
+  box-shadow: inset 0 -2px 0 0 var(--colors-primary);
+  background: var(--colors-white);
 }
 </style>

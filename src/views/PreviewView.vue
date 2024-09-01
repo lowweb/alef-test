@@ -1,7 +1,8 @@
+<script setup>
+import BPersonPreview from '../components/blocks/BPersonPreview.vue'
+</script>
 <template>
-  <div>Preview</div>
+  <BPersonPreview />
 </template>
-
-<script setup></script>
 
 <style lang="scss" scoped></style>

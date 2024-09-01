@@ -3,26 +3,28 @@ import { defineStore } from 'pinia'
 
 export const usePersonDataStore = defineStore('personDataStore', () => {
   const person = ref({
-    name: 'dewdewde',
-    age: '20',
-    childrens: [
-      {
-        name: 'frefef',
-        age: '2'
-      },
-      {
-        name: 'frejfirt',
-        age: '3'
-      }
-    ]
+    name: '',
+    age: '',
+    childrens: []
   })
-  const addToPerson = (object) => {
+  let maxId = 1
+
+  const savePersonInfo = (object) => {
     person.value = object
-    console.log('add')
   }
 
+  const addChildren = () => {
+    person.value.childrens.push({ id: maxId, name: '', age: '' })
+    maxId = maxId + 1
+  }
+  const deleteChildren = (id) => {
+    person.value.childrens = person.value.childrens.filter((el) => el.id != id)
+  }
   return {
     person,
-    addToPerson
+    maxId,
+    savePersonInfo,
+    addChildren,
+    deleteChildren
   }
 })
