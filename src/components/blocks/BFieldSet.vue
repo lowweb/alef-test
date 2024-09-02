@@ -2,7 +2,6 @@
 <template>
   <fieldset class="fieldset">
     <legend class="fieldset__legend"><slot name="legend"></slot></legend>
-
     <slot name="fieldset"></slot>
   </fieldset>
 </template>

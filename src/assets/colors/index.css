@@ -2,20 +2,11 @@
   --colors-primary-disabled: #ceecfc;
   --colors-primary: #01a7fd;
   --colors-primary-hover: #0f79af;
-  /* --colors-primary-active: #59c79f; */
+  --colors-primary-active: #59c79f;
   --colors-whites: rgba(255, 255, 255, 0.88);
   --colors-white: #fff;
   --colors-graym: #fafafa;
   --colors-grayl: #f1f1f1;
-  /* --colors-grass: #d4d4d4; */
   --colors-gray: rgba(17, 17, 17, 0.48);
-  /* --colors-grayk: #6b6b6b; */
   --colors-black: #111;
-  /* --colors-red-girl: #f9e3e3; */
-  /* --colors-red: #db524e;
-	--colors-super-red: #c7302b;
-	--colors-green: #27ae60;
-	--colors-blue: #428bf9;
-	--colors-red-boy: #f2caca;
-	--colors-star: #ffd912; */
 }

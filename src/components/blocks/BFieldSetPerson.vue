@@ -1,6 +1,5 @@
 <script setup>
 import UInput from '../ui/UInput.vue'
-import UButton from '../ui/UButton.vue'
 const props = defineProps({
   data: {
     type: Object,

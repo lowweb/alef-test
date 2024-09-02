@@ -13,8 +13,12 @@ const personStore = usePersonDataStore()
       <template #fieldset>
         <div
           class="person-preview"
-          v-if="personStore.person.name != '' || personStore.person.age != ''"
+          v-if="personStore.person.name === '' && personStore.person.age === ''"
         >
+          Нет данных
+        </div>
+
+        <div class="person-preview" v-else>
           {{ personStore.person.name }}, {{ personStore.person.age }}
           {{ getAgeNoun(personStore.person.age) }}
         </div>
