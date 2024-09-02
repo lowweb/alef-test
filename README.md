@@ -1,7 +1,7 @@
 # alef-test
 
 node version v20.10.0
-npm version 10.8.2
+npm version 10.8.3
 
 ## Project Setup
 
