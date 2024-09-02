@@ -28,7 +28,7 @@ const deleteChildren = (id) => {
       <template #iconButton> <IPlus /> </template>
       <template #textButton>Добавить ребенка</template>
     </UButton>
-    <div class="childrens__row" v-for="(children, index) in data" :key="children.id">
+    <div class="childrens__row" v-for="children in data" :key="children.id">
       <UInput v-model="children.name" placeholder="Введите имя" type="text">Имя</UInput>
       <UInput v-model="children.age" placeholder="Введите возвраст" type="number">Возраст</UInput>
       <UButton class="button--flat childrens__button" @click="deleteChildren(children.id)">
