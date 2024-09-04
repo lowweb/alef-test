@@ -22,7 +22,6 @@ const props = defineProps({
     default: 'text'
   }
 })
-// const regexMask = '[^?!,.а-яА-ЯёЁ\s]'
 </script>
 
 <template>
