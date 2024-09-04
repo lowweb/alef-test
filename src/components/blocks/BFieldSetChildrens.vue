@@ -2,6 +2,7 @@
 import UInput from '../ui/UInput.vue'
 import UButton from '../ui/UButton.vue'
 import IPlus from '../icons/IPlus.vue'
+import checkDigit from '@/utils/checkDigit'
 import { usePersonDataStore } from '@/stores/PersonDataStore'
 const personStore = usePersonDataStore()
 const props = defineProps({
@@ -30,7 +31,13 @@ const deleteChildren = (id) => {
     </UButton>
     <div class="childrens__row" v-for="children in data" :key="children.id">
       <UInput v-model="children.name" placeholder="Введите имя" type="text">Имя</UInput>
-      <UInput v-model="children.age" placeholder="Введите возвраст" type="number">Возраст</UInput>
+      <UInput
+        v-model="children.age"
+        placeholder="Введите возвраст"
+        type="number"
+        @keydown="checkDigit"
+        >Возраст</UInput
+      >
       <UButton class="button--flat childrens__button" @click="deleteChildren(children.id)">
         <template #textButton>Удалить</template>
       </UButton>
