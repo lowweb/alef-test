@@ -1,6 +1,6 @@
 <script setup>
 import router from '@/router'
-import BFieldSet from '../blocks/BFieldSet.vue'
+import UFieldSet from '../ui/UFieldSet.vue'
 import BForm from '../blocks/BForm.vue'
 import BFieldSetPerson from '../blocks/BFieldSetPerson.vue'
 import BFieldSetChildrens from '../blocks/BFieldSetChildrens.vue'
@@ -14,19 +14,19 @@ const savePersonInfo = () => {
 
 <template>
   <BForm>
-    <BFieldSet class="form__fieldset">
+    <UFieldSet class="form__fieldset">
       <template #legend>Персональные данные</template>
       <template #fieldset>
         <BFieldSetPerson :data="personStore.person"> </BFieldSetPerson>
       </template>
-    </BFieldSet>
+    </UFieldSet>
 
-    <BFieldSet class="form__fieldset">
+    <UFieldSet class="form__fieldset">
       <template #legend>Дети (макс. 5)</template>
       <template #fieldset>
         <BFieldSetChildrens :data="personStore.person.childrens"> </BFieldSetChildrens>
       </template>
-    </BFieldSet>
+    </UFieldSet>
     <UButton class="form__button button--primary" @click="savePersonInfo">
       <template #textButton>Сохранить</template>
     </UButton>

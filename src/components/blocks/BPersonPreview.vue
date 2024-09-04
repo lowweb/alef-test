@@ -1,5 +1,5 @@
 <script setup>
-import BFieldSet from '../blocks/BFieldSet.vue'
+import UFieldSet from '../ui/UFieldSet.vue'
 import BForm from '../blocks/BForm.vue'
 import { usePersonDataStore } from '@/stores/PersonDataStore'
 import getAgeNoun from '@/utils/getAgeNoun'
@@ -8,7 +8,7 @@ const personStore = usePersonDataStore()
 
 <template>
   <BForm>
-    <BFieldSet class="form__fieldset">
+    <UFieldSet class="form__fieldset">
       <template #legend>Персональные данные</template>
       <template #fieldset>
         <div
@@ -23,9 +23,9 @@ const personStore = usePersonDataStore()
           {{ getAgeNoun(personStore.person.age) }}
         </div>
       </template>
-    </BFieldSet>
+    </UFieldSet>
 
-    <BFieldSet class="form__fieldset">
+    <UFieldSet class="form__fieldset">
       <template #legend>Дети</template>
       <template #fieldset>
         <li
@@ -44,7 +44,7 @@ const personStore = usePersonDataStore()
           </li>
         </ul>
       </template>
-    </BFieldSet>
+    </UFieldSet>
   </BForm>
 </template>
 
